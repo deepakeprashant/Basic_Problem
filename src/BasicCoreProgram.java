@@ -1,16 +1,18 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BasicCoreProgram {
-    static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         while (true) {
             System.out.println("WELCOME TO BASIC CORE PROGRAM");
             System.out.println("1] FLIP COIN % TAIL/HEAD");
             System.out.println("2] LEAP YEAR PROGRAM");
             System.out.println("3] POWER OF 2 PROGRAM");
             System.out.println("4] HARMONIC NUMBER PROGRAM");
-            System.out.println("5] EXIT PROGRAM");
+            System.out.println("5] PRIME FACTORIZATION PROGRAM");
+            System.out.println("6] EXIT PROGRAM");
             System.out.println("ENTER YOUR CHOICE");
             switch (scan.nextInt()) {
                 case 1:
@@ -79,6 +81,21 @@ public class BasicCoreProgram {
                     }
                     break;
                 case 5:
+                    int number;
+                    System.out.println("Please enter a number to find out the prime factors");
+                    number = scan.nextInt();
+                    int index;
+                    for (index = 2; index * index <= number; index++) {
+                        System.out.println("index"+index);
+                        while (number % index == 0) {
+                            System.out.println("\t" + index + "\t");
+                            number = number / index;
+                        }
+                    }
+                    if (!(index * index <= number))
+                        System.out.println("\t" + number);
+                    break;
+                case 6:
                     System.out.println("THANK YOU ..!");
                     System.exit(0);
                 default:
