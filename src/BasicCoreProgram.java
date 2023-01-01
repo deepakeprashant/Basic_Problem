@@ -9,7 +9,8 @@ public class BasicCoreProgram {
             System.out.println("1] FLIP COIN % TAIL/HEAD");
             System.out.println("2] LEAP YEAR PROGRAM");
             System.out.println("3] POWER OF 2 PROGRAM");
-            System.out.println("4] EXIT PROGRAM");
+            System.out.println("4] HARMONIC NUMBER PROGRAM");
+            System.out.println("5] EXIT PROGRAM");
             System.out.println("ENTER YOUR CHOICE");
             switch (scan.nextInt()) {
                 case 1:
@@ -61,6 +62,23 @@ public class BasicCoreProgram {
                     }
                     break;
                 case 4:
+                    System.out.println("WELCOME TO HARMONIC NUMBER ");
+                    System.out.println("ENTER HARMONIC Nth NUMBER");
+                    int Number_Nth = scan.nextInt();
+                    if (Number_Nth != 0) {
+                        double total = 0.0;
+                        while (Number_Nth > 0) {
+                            total = total + (double) 1 / Number_Nth;
+                            System.out.print("   1/" + Number_Nth + " = " + total);
+                            Number_Nth--;
+                        }
+                        System.out.println("\n   TOTAL SUM OF HARMONIC SERIES IS = " + total);
+
+                    } else {
+                        System.out.println("RESULT " + Number_Nth + " BECASUE 1/0 =" + Number_Nth);
+                    }
+                    break;
+                case 5:
                     System.out.println("THANK YOU ..!");
                     System.exit(0);
                 default:
