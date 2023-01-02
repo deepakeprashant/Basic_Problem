@@ -6,17 +6,18 @@ public class BasicCoreProgram {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         while (true) {
-            System.out.println("WELCOME TO BASIC CORE PROGRAM");
-            System.out.println("1] FLIP COIN % TAIL/HEAD");
-            System.out.println("2] LEAP YEAR PROGRAM");
-            System.out.println("3] POWER OF 2 PROGRAM");
-            System.out.println("4] HARMONIC NUMBER PROGRAM");
-            System.out.println("5] PRIME FACTORIZATION PROGRAM");
-            System.out.println("6] QUOTIENT AND REMAINDER PROGRAM");
-            System.out.println("7] SWAP TWO NUMBERS PROGRAM");
-            System.out.println("8] EVEN ODD NUMBERS PROGRAM");
-            System.out.println("9] ALPHABET VOWEL OR CONSONANT");
-            System.out.println("10] EXIT PROGRAM");
+            System.out.println(":: WELCOME TO BASIC CORE PROGRAM ::");
+            System.out.println(" 1] FLIP COIN % TAIL/HEAD");
+            System.out.println(" 2] LEAP YEAR PROGRAM");
+            System.out.println(" 3] POWER OF 2 PROGRAM");
+            System.out.println(" 4] HARMONIC NUMBER PROGRAM");
+            System.out.println(" 5] PRIME FACTORIZATION PROGRAM");
+            System.out.println(" 6] QUOTIENT AND REMAINDER PROGRAM");
+            System.out.println(" 7] SWAP TWO NUMBERS PROGRAM");
+            System.out.println(" 8] EVEN ODD NUMBERS PROGRAM");
+            System.out.println(" 9] ALPHABET VOWEL OR CONSONANT");
+            System.out.println("10] LARGEST NUMBER FIND PROGRAM");
+            System.out.println("11] EXIT PROGRAM");
             System.out.println("ENTER YOUR CHOICE");
             switch (scan.nextInt()) {
                 case 1:
@@ -141,6 +142,18 @@ public class BasicCoreProgram {
                         System.out.println(ch + " IS CONSONANT");
                     break;
                 case 10:
+                    System.out.println("WELCOME LARGEST AMONG THREE NUMBER");
+                    System.out.println("ENTER FIRST NUMBER");
+                    int x = scan.nextInt();
+                    System.out.println("ENTER SECOND NUMBER");
+                    int y = scan.nextInt();
+                    System.out.println("ENTER THIRD NUMBER");
+                    int z = scan.nextInt();
+                    temp = x > y ? x : y;
+                    int largest = temp > z ? temp : z;
+                    System.out.println("LARGEST NUMBER IS = " +largest);
+                    break;
+                case 11:
                     System.out.println("THANK YOU ..!");
                     System.exit(0);
                 default:
