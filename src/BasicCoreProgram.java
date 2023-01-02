@@ -12,7 +12,9 @@ public class BasicCoreProgram {
             System.out.println("3] POWER OF 2 PROGRAM");
             System.out.println("4] HARMONIC NUMBER PROGRAM");
             System.out.println("5] PRIME FACTORIZATION PROGRAM");
-            System.out.println("6] EXIT PROGRAM");
+            System.out.println("6] QUOTIENT AND REMAINDER PROGRAM");
+            System.out.println("7] SWAP TWO NUMBERS PROGRAM");
+            System.out.println("8] EXIT PROGRAM");
             System.out.println("ENTER YOUR CHOICE");
             switch (scan.nextInt()) {
                 case 1:
@@ -96,6 +98,30 @@ public class BasicCoreProgram {
                         System.out.println("\t" + number);
                     break;
                 case 6:
+                    System.out.println("WELCOME QUOTIENT & REMAINDER");
+                    System.out.println("ENTER ANY DIVIDEND INTEGER VALUE");
+                    int dividend = scan.nextInt();
+                    System.out.println("ENTER DIVISOR INTEGER VALUE");
+                    int divisor = scan.nextInt();
+                    int quotient = dividend / divisor;
+                    int remainder = dividend % divisor;
+                    System.out.println("QUOTIENT IS = " + quotient);
+                    System.out.println("REMAINDER IS = " + remainder);
+                    break;
+                case 7:
+                    System.out.println("WELCOME TO SWAP TWO NUMBER");
+                    System.out.println("ENTER ANY INTEGER VALUE");
+                    int num = scan.nextInt();
+                    System.out.println("ENTER NEXT INTEGER VALUE");
+                    int num2 = scan.nextInt();
+                    System.out.println("BEFORE SWAPPING :: FIRST_INPUT = " + num + "  SECOND_INPUT = " + num2);
+                    int temp = 0;
+                    temp = num;
+                    num = num2;
+                    num2 = temp;
+                    System.out.println("AFTER SWAPPING :: FIRST_INPUT = " + num + "  SECOND_INPUT = " + num2);
+                    break;
+                case 8:
                     System.out.println("THANK YOU ..!");
                     System.exit(0);
                 default:
