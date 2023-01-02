@@ -15,7 +15,8 @@ public class BasicCoreProgram {
             System.out.println("6] QUOTIENT AND REMAINDER PROGRAM");
             System.out.println("7] SWAP TWO NUMBERS PROGRAM");
             System.out.println("8] EVEN ODD NUMBERS PROGRAM");
-            System.out.println("9] EXIT PROGRAM");
+            System.out.println("9] ALPHABET VOWEL OR CONSONANT");
+            System.out.println("10] EXIT PROGRAM");
             System.out.println("ENTER YOUR CHOICE");
             switch (scan.nextInt()) {
                 case 1:
@@ -131,6 +132,15 @@ public class BasicCoreProgram {
                         System.out.println("NUMBER" + num + " IS ODD");
                     break;
                 case 9:
+                    System.out.println("WELCOME VOWEL AND CONSONANT PROGRAM");
+                    System.out.println("ENTER ANY ALPHABETICAL CHARACTER");
+                    char ch = scan.next().charAt(0);
+                    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                        System.out.println(ch + " IS VOWEL ");
+                    else
+                        System.out.println(ch + " IS CONSONANT");
+                    break;
+                case 10:
                     System.out.println("THANK YOU ..!");
                     System.exit(0);
                 default:
