@@ -14,7 +14,8 @@ public class BasicCoreProgram {
             System.out.println("5] PRIME FACTORIZATION PROGRAM");
             System.out.println("6] QUOTIENT AND REMAINDER PROGRAM");
             System.out.println("7] SWAP TWO NUMBERS PROGRAM");
-            System.out.println("8] EXIT PROGRAM");
+            System.out.println("8] EVEN ODD NUMBERS PROGRAM");
+            System.out.println("9] EXIT PROGRAM");
             System.out.println("ENTER YOUR CHOICE");
             switch (scan.nextInt()) {
                 case 1:
@@ -88,7 +89,7 @@ public class BasicCoreProgram {
                     number = scan.nextInt();
                     int index;
                     for (index = 2; index * index <= number; index++) {
-                        System.out.println("index"+index);
+                        System.out.println("index" + index);
                         while (number % index == 0) {
                             System.out.println("\t" + index + "\t");
                             number = number / index;
@@ -122,6 +123,14 @@ public class BasicCoreProgram {
                     System.out.println("AFTER SWAPPING :: FIRST_INPUT = " + num + "  SECOND_INPUT = " + num2);
                     break;
                 case 8:
+                    System.out.println("WELCOME EVEN ODD PROGRAMS\nPLEASE ENTER NUMBERS :");
+                    num = scan.nextInt();
+                    if (num % 2 == 0)
+                        System.out.println("NUMBER" + num + " IS EVEN");
+                    else
+                        System.out.println("NUMBER" + num + " IS ODD");
+                    break;
+                case 9:
                     System.out.println("THANK YOU ..!");
                     System.exit(0);
                 default:
